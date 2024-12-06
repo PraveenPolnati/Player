@@ -1,0 +1,14 @@
+# Use official OpenJDK image
+FROM openjdk:17-jdk-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the Player.jar file from the target directory into the container
+COPY target/Player-0.0.1-SNAPSHOT.jar Player.jar
+
+# Expose the port your Spring Boot application will run on (default 8080)
+EXPOSE 8080
+
+# Command to run the Spring Boot application
+ENTRYPOINT ["java", "-jar", "/app/Player.jar"]
