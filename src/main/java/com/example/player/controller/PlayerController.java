@@ -20,7 +20,7 @@ public class PlayerController {
     @Autowired
     private PlayerService playerService;
     
-    @GetMapping("/")
+    @GetMapping("/players")
     public ArrayList<Player> getAllPlayers() {
         return playerService.getAllPlayers();
     }
