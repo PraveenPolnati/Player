@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/Player-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port that your Spring Boot app will run on (default: 8080)
-EXPOSE 8080
+EXPOSE 8081
 
 # Command to run the Spring Boot app
 ENTRYPOINT ["java", "-jar", "app.jar"]
